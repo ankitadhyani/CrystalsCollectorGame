@@ -35,6 +35,7 @@ $(document).ready(function(){
         $targetNumber = getRndInteger(19, 120);
         $("#targetNumber").text($targetNumber);
 
+        //Reset user's total score at start of a new game and write it to page
         $userTotalScore = 0;
         $("#userTotalScore").text($userTotalScore);
 
@@ -44,7 +45,7 @@ $(document).ready(function(){
         imageValues = []; //Reset values w.r.t. each image
 
 
-        //Generate random number for each of the images b/w 1 - 12
+        //Generate random number for each of the images b/w 1 - 12 and store them in an array
         for(var i=0 ; i<imageCount ; i++) {
 
             var num = getRndInteger(1, 12);
@@ -100,7 +101,7 @@ $(document).ready(function(){
     
 
     // OnClick event for every image
-    $(".crystal-image").on("click", function() { 
+    $("#crystals").on("click", ".crystal-image",  function() { 
 
         console.log("In crystal-image onClick() ");
 
@@ -109,8 +110,6 @@ $(document).ready(function(){
             console.log("isGameRunning = false");
             return;
         }
-
-        console.log("crystalValue -> " + ($(this).attr("crystalvalue")));
 
         //Getting value of crystal based on the image clicked
         var crystalValue = ($(this).attr("crystalvalue"));
