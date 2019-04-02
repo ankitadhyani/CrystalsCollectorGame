@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Collector Game</title>
+
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+    <!-- Added a link to our external stylesheet-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+    
+    <div class="mainBody">
+        
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-3">CRYSTALS COLLECTOR !!!</h1>
+                <button class="btn btn-outline-primary btn-light"><h3 id="startNewGame">Start New Game</h3></button>
+            </div>
+        </div>
+
+
+        <div class="row container-fluid middleContainer">
+            <!-- Box for random total -->
+            <div class="col-6">
+                <h2>Total: <span id="targetNumber"></span></h2>
+            </div>
+
+            <!-- Box for Wins and Losses counter -->
+            <div class="col-6 container-fluid text-right">
+                <button  class="btn btn-success"><h3>Wins: <span id="wins"></span></h3></button>
+                <button  class="btn btn-warning"><h3>Losses: <span id="losses"></span></h3></button>
+            </div>
+        </div>
+
+        <!-- Div that handles all the crystal images -->
+        <div class="row container-fluid border">
+            <div id="crystals"></div>
+        </div>
+        
+        <!-- Div that handles user's total score -->
+        <div class="row">
+            <div class="col-12">
+                <h2>Your total score is: <span id="userTotalScore"></span></h2>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+</html>
